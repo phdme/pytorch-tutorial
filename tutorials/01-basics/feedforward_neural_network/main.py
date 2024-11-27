@@ -88,7 +88,7 @@ with torch.no_grad():
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
-    print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
+    print(f'Accuracy of the network on the 10000 test images: {100 * correct / total} %')
 
 # Save the model checkpoint
 torch.save(model.state_dict(), 'model.ckpt')
